@@ -23,8 +23,12 @@ export default function Notes() {
       <NotesHeader />
       <div className="num-notes">
         <div>
-          <span style={{ color: "black" }}>Total-Notes :-</span>{" "}
-          <span style={{ color: "#86Adff" }}>124 Notes </span>
+          <span style={{ color: "black", fontSize: "1.15vw" }}>
+            Total-Notes :-
+          </span>{" "}
+          <span style={{ color: "#86Adff", fontSize: "1.15vw" }}>
+            124 Notes{" "}
+          </span>
         </div>
 
         <div className="notes-icon-container">

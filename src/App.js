@@ -2,17 +2,20 @@ import "./app.css";
 
 import Header from "./components/Header";
 import NotesContainer from "./components/NotesContainer";
+import AppDataContext from "../src/context/AppDataContext";
 
 function App() {
   return (
     <div className="app">
-      <section className="header-section">
-        <Header />
-      </section>
+      <AppDataContext>
+        <section className="header-section">
+          <Header />
+        </section>
 
-      <section className="notes-section">
-        <NotesContainer />
-      </section>
+        <section className="notes-section">
+          <NotesContainer />
+        </section>
+      </AppDataContext>
     </div>
   );
 }
