@@ -15,21 +15,43 @@ export default function Notes() {
   return (
     <div className="notes">
       <NotesHeader />
-      <p className="num-notes">
+      <div className="num-notes">
         <div>
           <span style={{ color: "black" }}>Total-Notes :-</span>{" "}
           <span style={{ color: "blue" }}>124 Notes </span>
         </div>
 
-        <div>
+        <div className="notes-icon-container">
           <IoIosArrowDropdown
-            style={{ height: "4vh", width: "4vw", cursor: "pointer" }}
+            className={`drop-down ${isBtnClicked ? "active-drop-down" : ""}`}
             onClick={function () {
               handleClicked();
             }}
           />
+          {isBtnClicked ? (
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <button
+                style={{
+                  color: `${isBtnClicked ? "blue" : "red"}`,
+                  transitionDuration: "2s",
+                }}
+              >
+                Notes
+              </button>
+              <button>Favourites</button>
+              <button>Saved</button>
+              <button>Pinned</button>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
-      </p>
+      </div>
     </div>
   );
 }
