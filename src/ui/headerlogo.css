@@ -1,0 +1,14 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: blue;
+  gap: 1vw;
+}
+
+.image {
+  height: 50px;
+  width: 50px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
