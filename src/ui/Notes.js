@@ -5,6 +5,12 @@ import { useState } from "react";
 
 export default function Notes() {
   const [isBtnClicked, setIsBtnClicked] = useState(false);
+  const [optionsArr, setOptionsArr] = useState([
+    "Notes",
+    "Favourites",
+    "Saved",
+    "Pinned",
+  ]);
 
   function handleClicked() {
     setIsBtnClicked(function (prevState) {
@@ -18,7 +24,7 @@ export default function Notes() {
       <div className="num-notes">
         <div>
           <span style={{ color: "black" }}>Total-Notes :-</span>{" "}
-          <span style={{ color: "blue" }}>124 Notes </span>
+          <span style={{ color: "#86Adff" }}>124 Notes </span>
         </div>
 
         <div className="notes-icon-container">
@@ -28,28 +34,27 @@ export default function Notes() {
               handleClicked();
             }}
           />
-          {isBtnClicked ? (
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <button
-                style={{
-                  color: `${isBtnClicked ? "blue" : "red"}`,
-                  transitionDuration: "2s",
-                }}
-              >
-                Notes
-              </button>
-              <button>Favourites</button>
-              <button>Saved</button>
-              <button>Pinned</button>
+
+          <div
+            className={`option-container ${
+              isBtnClicked ? "active-option-container" : ""
+            }`}
+          >
+            <div className="options-btn-container">
+              {optionsArr.map(function (citem, i) {
+                return (
+                  <button
+                    key={i}
+                    className={`options-btn ${
+                      isBtnClicked ? "active-options-btn" : ""
+                    }`}
+                  >
+                    {citem}
+                  </button>
+                );
+              })}
             </div>
-          ) : (
-            ""
-          )}
+          </div>
         </div>
       </div>
     </div>
