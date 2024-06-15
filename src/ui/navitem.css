@@ -14,3 +14,16 @@
   transition-duration: 1s;
   color: white;
 }
+
+@media screen and (max-width: 600px) {
+  .nav-item {
+    font-size: 4vw;
+    transition-duration: 1s;
+    padding: 1vw;
+    border-radius: 2px;
+  }
+
+  .active {
+    transform: scale(1);
+  }
+}

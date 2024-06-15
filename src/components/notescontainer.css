@@ -1,0 +1,21 @@
+.notes-container {
+  height: 99%;
+  width: 85%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  gap: 4.5vw;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .notes-container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+    align-items: center;
+    justify-content: center;
+    height: 93%;
+    width: 90%;
+  }
+}

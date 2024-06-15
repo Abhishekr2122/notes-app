@@ -17,3 +17,9 @@
 .para {
   font-size: 1.2vw;
 }
+
+@media screen and (max-width: 600px) {
+  .logo-container {
+    display: none;
+  }
+}

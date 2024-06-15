@@ -3,3 +3,10 @@
   gap: 3vw;
   /* border: 1px solid blue; */
 }
+
+@media screen and (max-width: 600px) {
+  .nav-container {
+    display: flex;
+    gap: 3.8vw;
+  }
+}

@@ -1,0 +1,22 @@
+.notes {
+  height: 95%;
+  width: 35%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.num-notes {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: aliceblue; */
+  padding: 0.6vw;
+
+  font-size: 1.2vw;
+}
+
+@media screen and (max-width: 600px) {
+  .notes {
+    width: 100%;
+  }
+}

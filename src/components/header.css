@@ -1,9 +1,20 @@
 .header {
   background-color: white;
-  height: 50px;
+  height: 35px;
   display: flex;
   align-items: center;
+  width: 90%;
+  gap: 21vw;
+  padding: 1.2vw;
+  border-radius: 6px;
+}
 
-  gap: 22vw;
-  padding: 1.4vw;
+@media screen and (max-width: 600px) {
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+    padding: 3.5vw;
+    background-color: white;
+  }
 }

@@ -1,0 +1,12 @@
+.daily-notes {
+  height: 95%;
+  width: 50%;
+  background-color: white;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 600px) {
+  .daily-notes {
+    width: 100%;
+  }
+}

@@ -1,0 +1,22 @@
+.notes-header {
+  height: 75px;
+  width: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.notes-para {
+  font-size: 1.3vw;
+  text-align: start;
+}
+
+.notes-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0.3vw;
+  /* background-color: green; */
+  gap: 0.1vw;
+}
