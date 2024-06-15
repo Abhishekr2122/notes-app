@@ -1,0 +1,21 @@
+.add-button {
+  padding: 0.4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3vw;
+  border-radius: 4px;
+  color: black;
+  border-style: none;
+  background-color: #bab3ff;
+  font-size: 1.1vw;
+  cursor: pointer;
+  transition-duration: 1s;
+  /* border: 1px solid red; */
+}
+
+.active-button {
+  transition-duration: 1s;
+  background-color: #8da6ff;
+  color: white;
+}

@@ -1,9 +1,10 @@
 .logo-container {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
-  background-color: blue;
+  justify-content: center;
+  background: transparent;
   gap: 1vw;
+  /* border: 1px solid green; */
 }
 
 .image {
@@ -11,4 +12,8 @@
   width: 50px;
   background-repeat: no-repeat;
   border-radius: 50%;
+}
+
+.para {
+  font-size: 1.2vw;
 }
