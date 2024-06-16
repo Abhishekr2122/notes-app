@@ -1,8 +1,11 @@
+import { useForm } from "react-hook-form";
 import { useDataContext } from "../context/AppDataContext";
 import "./form.css";
 
 export default function Form() {
   const { setIsClicked } = useDataContext();
+  const { register } = useForm();
+
   function handleCloseForm() {
     setIsClicked(false);
   }
