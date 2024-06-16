@@ -13,8 +13,6 @@ export default function Notes() {
     });
   });
   const [selectedOption, setSelectedOption] = useState("");
-  console.log(crrOptionsArr);
-  console.log(selectedOption);
 
   useEffect(
     function () {

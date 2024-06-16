@@ -4,7 +4,7 @@ import "./form.css";
 import { v4 as uuid } from "uuid";
 
 export default function Form() {
-  const { setIsClicked } = useDataContext();
+  const { setIsClicked, notesArray, setNotesArray } = useDataContext();
 
   const { register, handleSubmit, reset } = useForm();
 
@@ -25,13 +25,18 @@ export default function Form() {
 
     const finalObj = {
       ...data,
-      favourite: false,
+      favourites: false,
       pinned: false,
       saved: false,
+      notes: true,
       createdOn: createdDate,
       createdTime: createdTime,
       id: unique_id,
     };
+
+    setNotesArray(function (prevState) {
+      return [finalObj, ...prevState];
+    });
 
     reset();
     setIsClicked(false);
