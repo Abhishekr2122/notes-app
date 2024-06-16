@@ -1,9 +1,16 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 const DataContext = createContext();
 
 export default function AppDataContext({ children }) {
-  return <DataContext.Provider value={{}}>{children}</DataContext.Provider>;
+  const navItems = ["Notes", "Favourites", "Saved", "Pinned"];
+  const [selectedItem, setSelectedItem] = useState("Notes");
+
+  return (
+    <DataContext.Provider value={{ navItems, selectedItem, setSelectedItem }}>
+      {children}
+    </DataContext.Provider>
+  );
 }
 
 export function useDataContext() {

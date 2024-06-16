@@ -1,21 +1,42 @@
 import NotesHeader from "./NotesHeader";
 import { IoIosArrowDropdown } from "react-icons/io";
 import "./notes.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDataContext } from "../context/AppDataContext";
 
 export default function Notes() {
+  const { navItems, setSelectedItem, selectedItem } = useDataContext();
   const [isBtnClicked, setIsBtnClicked] = useState(false);
-  const [optionsArr, setOptionsArr] = useState([
-    "Notes",
-    "Favourites",
-    "Saved",
-    "Pinned",
-  ]);
+  const [crrOptionsArr, setCrrOptionsArr] = useState(function () {
+    return navItems.filter(function (citem) {
+      return citem !== selectedItem;
+    });
+  });
+  const [selectedOption, setSelectedOption] = useState("");
+  console.log(crrOptionsArr);
+  console.log(selectedOption);
+
+  useEffect(
+    function () {
+      setCrrOptionsArr(function () {
+        return navItems.filter(function (citem) {
+          return citem !== selectedItem;
+        });
+      });
+    },
+    [setCrrOptionsArr, selectedOption, navItems, selectedItem]
+  );
 
   function handleClicked() {
     setIsBtnClicked(function (prevState) {
       return !prevState;
     });
+  }
+
+  function handleOptionsClick(value) {
+    setSelectedOption(value);
+    setSelectedItem(value);
+    setIsBtnClicked(false);
   }
 
   return (
@@ -45,13 +66,16 @@ export default function Notes() {
             }`}
           >
             <div className="options-btn-container">
-              {optionsArr.map(function (citem, i) {
+              {crrOptionsArr.map(function (citem, i) {
                 return (
                   <button
                     key={i}
                     className={`options-btn ${
                       isBtnClicked ? "active-options-btn" : ""
                     }`}
+                    onClick={function () {
+                      handleOptionsClick(citem);
+                    }}
                   >
                     {citem}
                   </button>

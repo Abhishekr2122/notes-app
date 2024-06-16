@@ -2,7 +2,7 @@ import "./navitem.css";
 
 export default function NavItem({
   content,
-  currElement,
+
   selectedItem,
   setSelectedItem,
 }) {
@@ -12,9 +12,9 @@ export default function NavItem({
 
   return (
     <button
-      className={`nav-item ${selectedItem === currElement ? "active" : ""}`}
+      className={`nav-item ${selectedItem === content ? "active" : ""}`}
       onClick={function () {
-        handleSelectedItem(currElement);
+        handleSelectedItem(content);
       }}
     >
       {content}

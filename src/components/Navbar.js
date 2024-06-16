@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { useDataContext } from "../context/AppDataContext";
 import NavItem from "../ui/NavItem";
 
 import "./navbar.css";
 export default function Navbar() {
-  const navItems = ["Notes", "Favourites", "Saved", "Pinned"];
-  const [selectedItem, setSelectedItem] = useState(0);
+  const { navItems, selectedItem, setSelectedItem } = useDataContext();
 
   return (
     <div className="nav-container">
@@ -15,7 +14,6 @@ export default function Navbar() {
             key={i}
             selectedItem={selectedItem}
             setSelectedItem={setSelectedItem}
-            currElement={i}
           />
         );
       })}
