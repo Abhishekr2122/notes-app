@@ -1,23 +1,40 @@
 import { useForm } from "react-hook-form";
 import { useDataContext } from "../context/AppDataContext";
 import "./form.css";
+import { v4 as uuid } from "uuid";
 
 export default function Form() {
   const { setIsClicked } = useDataContext();
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
 
-  console.log("This is the error object", errors);
+  const { register, handleSubmit, reset } = useForm();
 
   function handleCloseForm() {
     setIsClicked(false);
   }
 
   function handleFormData(data) {
-    console.log(data);
+    const unique_id = uuid().slice(0, 8);
+
+    const crrDate = new Date();
+
+    const createdDate = `${crrDate.getDate()}/${
+      crrDate.getMonth() + 1
+    }/${crrDate.getFullYear()}`;
+
+    const createdTime = `${crrDate.getHours()}:${crrDate.getMinutes()}`;
+
+    const finalObj = {
+      ...data,
+      favourite: false,
+      pinned: false,
+      saved: false,
+      createdOn: createdDate,
+      createdTime: createdTime,
+      id: unique_id,
+    };
+
+    reset();
+    setIsClicked(false);
   }
 
   return (
