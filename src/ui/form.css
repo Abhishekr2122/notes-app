@@ -8,16 +8,17 @@
 }
 
 .form {
-  width: 35%;
+  width: 30%;
   height: 80vh;
   display: flex;
   flex-direction: column;
   /* align-items: center;
   justify-content: center; */
-  gap: 1.6vw;
+  gap: 1.5vw;
   padding: 1vw;
   background-color: #d3dff7;
   border-radius: 6px;
+  color: #4a41ed;
   /* border: 1px solid red; */
 }
 
@@ -31,6 +32,7 @@
   font-size: 1.5vw;
   text-align: center;
   padding: 0.2vw;
+  color: #4a41ed;
 }
 
 .input-container {
@@ -40,12 +42,12 @@
 }
 
 .input-container > label {
-  font-size: 1.2vw;
+  font-size: 1.25vw;
 }
 
 .input-container > input {
   padding: 0.8vw;
-  font-size: 1vw;
+  font-size: 1.09vw;
   border-radius: 4px;
   color: black;
   border-style: none;
@@ -53,8 +55,8 @@
 }
 
 .input-container > input:focus::placeholder {
-  color: #8d6aff;
-  transition-duration: 1s;
+  color: #8e89f1;
+  transition-duration: 0.2s;
 }
 
 .input-container > input:focus {
@@ -64,6 +66,11 @@
 .input-container > textarea {
   border-style: none;
   border-radius: 4px;
+  padding: 0.7vw;
+}
+
+.input-container > textarea:focus {
+  outline: none;
 }
 
 .submit-btn {
@@ -71,10 +78,12 @@
   border-radius: 6px;
   border-style: none;
   background-color: white;
-  font-size: 1.1vw;
+  font-size: 1.2vw;
   cursor: pointer;
   width: 50%;
   transition-duration: 0.5s;
+
+  color: #4a41ed;
 }
 
 .submit-btn-container {
@@ -97,6 +106,7 @@
   border-radius: 4px;
   cursor: pointer;
   transition-duration: 0.5s;
+  color: #4a41ed;
 }
 
 .form-close-btn:hover {
