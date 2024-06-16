@@ -3,6 +3,7 @@ import "./app.css";
 import Header from "./components/Header";
 import NotesContainer from "./components/NotesContainer";
 import AppDataContext from "../src/context/AppDataContext";
+import FormModal from "./components/FormModal";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <section className="notes-section">
           <NotesContainer />
         </section>
+        <FormModal />
       </AppDataContext>
     </div>
   );

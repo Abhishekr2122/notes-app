@@ -1,9 +1,36 @@
-.form {
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 10px solid yellow; */
+  height: 100%;
   width: 100%;
+}
+
+.form {
+  width: 35%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
-  gap: 1vw;
+  /* align-items: center;
+  justify-content: center; */
+  gap: 1.6vw;
   padding: 1vw;
+  background-color: #d3dff7;
+  border-radius: 6px;
+  /* border: 1px solid red; */
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-header > p {
+  font-size: 1.5vw;
+  text-align: center;
+  padding: 0.2vw;
 }
 
 .input-container {
@@ -12,23 +39,68 @@
   gap: 1vw;
 }
 
+.input-container > label {
+  font-size: 1.2vw;
+}
+
 .input-container > input {
   padding: 0.8vw;
-  /* border: 1px solid blue; */
+  font-size: 1vw;
   border-radius: 4px;
-  border: 1px solid #8d6aff;
+  color: black;
+  border-style: none;
+  transition-duration: 1s;
 }
 
 .input-container > input:focus::placeholder {
-  color: blue;
+  color: #8d6aff;
+  transition-duration: 1s;
 }
 
 .input-container > input:focus {
   outline: none;
 }
 
+.input-container > textarea {
+  border-style: none;
+  border-radius: 4px;
+}
+
 .submit-btn {
   padding: 1vw;
-  border-radius: 4px;
+  border-radius: 6px;
   border-style: none;
+  background-color: white;
+  font-size: 1.1vw;
+  cursor: pointer;
+  width: 50%;
+  transition-duration: 0.5s;
+}
+
+.submit-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+
+.submit-btn:hover {
+  background-color: #8e89f1;
+  transition-duration: 0.6s;
+  color: white;
+}
+
+.form-close-btn {
+  font-size: 1.1vw;
+  padding: 0.5vw;
+  border-style: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.form-close-btn:hover {
+  background-color: #8e89f1;
+  transition-duration: 0.6s;
+  color: white;
 }

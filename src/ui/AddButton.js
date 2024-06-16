@@ -1,10 +1,11 @@
 import { IoAddCircleOutline } from "react-icons/io5";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import "./addbutton.css";
-import { useState } from "react";
+
+import { useDataContext } from "../context/AppDataContext";
 
 export default function AddButton() {
-  const [isClicked, setIsClicked] = useState(false);
+  const { isClicked, setIsClicked } = useDataContext();
 
   function handleButtonClick() {
     setIsClicked(function (prevState) {
