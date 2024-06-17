@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import NotesContainer from "./components/NotesContainer";
 import AppDataContext from "../src/context/AppDataContext";
 import FormModal from "./components/FormModal";
+import NotesCard from "./components/NotesCard";
 
 function App() {
   return (

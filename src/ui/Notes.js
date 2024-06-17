@@ -3,6 +3,7 @@ import { IoIosArrowDropdown } from "react-icons/io";
 import "./notes.css";
 import { useEffect, useState } from "react";
 import { useDataContext } from "../context/AppDataContext";
+import NotesCardContainer from "../components/NotesCardContainer";
 
 export default function Notes() {
   const { navItems, setSelectedItem, selectedItem } = useDataContext();
@@ -40,16 +41,10 @@ export default function Notes() {
   return (
     <div className="notes">
       <NotesHeader />
-      <div className="num-notes">
-        <div>
-          <span style={{ color: "black", fontSize: "1.15vw" }}>
-            Total-Notes :-
-          </span>{" "}
-          <span style={{ color: "#86Adff", fontSize: "1.15vw" }}>
-            124 Notes{" "}
-          </span>
+      <div className="num-notes-info">
+        <div className="num-notes-count">
+          <p>124 Notes</p>
         </div>
-
         <div className="notes-icon-container">
           <IoIosArrowDropdown
             className={`drop-down ${isBtnClicked ? "active-drop-down" : ""}`}
@@ -83,6 +78,7 @@ export default function Notes() {
           </div>
         </div>
       </div>
+      <NotesCardContainer />
     </div>
   );
 }

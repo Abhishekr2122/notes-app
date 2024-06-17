@@ -1,0 +1,17 @@
+.notes-card-container {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  overflow: scroll;
+  height: 53%;
+  border-radius: 6px;
+  gap: 30px;
+
+  /* border: 1px solid green; */
+}
+
+.notes-card-container::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
