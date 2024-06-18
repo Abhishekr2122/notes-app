@@ -5,13 +5,13 @@
   border-style: none;
   background: transparent;
   font-size: 1.1vw;
-  transition-duration: 1s;
+  transition-duration: 0.8s;
 }
 
 .active {
   background-color: #8da6ff;
   transform: scale(1.1);
-  transition-duration: 1s;
+  transition-duration: 0.8s;
   color: white;
 }
 
