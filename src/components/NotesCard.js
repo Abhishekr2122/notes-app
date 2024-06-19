@@ -1,4 +1,7 @@
 import "./notescard.css";
+import { IoIosStar } from "react-icons/io";
+import { TbPinned } from "react-icons/tb";
+import { RiSave2Fill } from "react-icons/ri";
 
 export default function NotesCard() {
   return (
@@ -14,17 +17,27 @@ export default function NotesCard() {
       </div>
       <div className="notes-main-content-container">
         <div className="notes-main-content">
-          <h1 className="notes-title">Title</h1>
-          <h2 className="notes-sub-title">Sub-title</h2>
-          <p className="notes-paragraph">content</p>
+          <div className="notes-text-container">
+            <h2 className="notes-title">Title</h2>
+          </div>
+          <div className="notes-text-container">
+            <h3 className="notes-sub-title">Sub-title</h3>
+          </div>
+          <div className="notes-text-container">
+            <p className="notes-paragraph">content</p>
+          </div>
         </div>
 
         <div className="notes-sub-content-container">
           <div className="date-time-container">
-            <p>date</p>
-            <p>time</p>
+            <span className="span-data">date</span>
+            <span className="span-data">time</span>
           </div>
-          <div className="options-icon-container">pinned favourites saved</div>
+          <div className="options-icon-container">
+            <IoIosStar />
+            <TbPinned />
+            <RiSave2Fill />
+          </div>
         </div>
       </div>
     </article>
