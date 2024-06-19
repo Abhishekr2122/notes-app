@@ -90,7 +90,7 @@
 
 .active-options-btn {
   transform: scale(1);
-  transition-duration: 1s;
+  transition-duration: 0.9s;
   background-color: #e8edff;
 }
 
