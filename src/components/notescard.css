@@ -52,20 +52,22 @@
   align-items: center;
   justify-content: space-around;
   padding: 0.2vw;
+  /* border: 1px solid gold; */
 }
 
 .date-time-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   /* border: 1px solid blue; */
   width: 50%;
+  color: rgb(104, 100, 100);
 }
 
 .options-icon-container {
   /* border: 1px solid brown; */
   height: 100%;
-  width: 50%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -77,6 +79,8 @@
   padding: 0.1vw;
   text-align: start;
   font-size: 1.2vw;
+  color: blue;
+  color: black;
 }
 
 .notes-sub-title {
@@ -85,21 +89,44 @@
   padding: 0.1vw;
   text-align: start;
   font-size: 0.9vw;
+  color: rgb(96, 94, 94);
+  font-weight: 700;
 }
 
 .notes-paragraph {
   width: 90%;
-  padding: 0.1vw;
+  padding: 0.2vw;
   text-align: start;
+  overflow: scroll;
+  height: 7.5vh;
+  background-color: white;
+  border-radius: 4px;
+  font-size: 0.97vw;
+  font-weight: 500;
+}
+
+.notes-paragraph::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
 }
 
 .notes-text-container {
   /* border: 1px solid red; */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 
 .span-data {
   font-size: 0.8vw;
+}
+
+.notes-icon {
+  width: 0.98vw;
+  cursor: pointer;
+  color: rgb(91, 143, 240);
+}
+
+.notes-icon:hover {
+  color: blue;
 }

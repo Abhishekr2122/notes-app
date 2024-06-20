@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useDataContext } from "../context/AppDataContext";
 import "./form.css";
 import { v4 as uuid } from "uuid";
+import toast from "react-hot-toast";
 
 export default function Form() {
   const { setIsClicked, notesArray, setNotesArray } = useDataContext();
@@ -40,6 +41,7 @@ export default function Form() {
 
     reset();
     setIsClicked(false);
+    toast.success("Note successfully added");
   }
 
   return (

@@ -36,8 +36,8 @@
 }
 
 .drop-down {
-  height: 6vh;
-  width: 2vw;
+  height: 3vh;
+  width: 3vw;
   cursor: pointer;
   color: black;
   display: flex;

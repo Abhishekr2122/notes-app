@@ -2,8 +2,10 @@ import "./notescard.css";
 import { IoIosStar } from "react-icons/io";
 import { TbPinned } from "react-icons/tb";
 import { RiSave2Fill } from "react-icons/ri";
+import { MdDelete } from "react-icons/md";
+import { FaEdit } from "react-icons/fa";
 
-export default function NotesCard() {
+export default function NotesCard({ crrNote }) {
   return (
     <article className="notes-card">
       <div className="image-container">
@@ -18,25 +20,27 @@ export default function NotesCard() {
       <div className="notes-main-content-container">
         <div className="notes-main-content">
           <div className="notes-text-container">
-            <h2 className="notes-title">Title</h2>
+            <h2 className="notes-title">{crrNote.title}</h2>
+            <MdDelete className="notes-icon" />
           </div>
           <div className="notes-text-container">
-            <h3 className="notes-sub-title">Sub-title</h3>
+            <h3 className="notes-sub-title">{crrNote.sub_title}</h3>
           </div>
           <div className="notes-text-container">
-            <p className="notes-paragraph">content</p>
+            <p className="notes-paragraph">{crrNote.text_area}</p>
           </div>
         </div>
 
         <div className="notes-sub-content-container">
           <div className="date-time-container">
-            <span className="span-data">date</span>
-            <span className="span-data">time</span>
+            <span className="span-data">{crrNote.createdOn}</span>
+            <span className="span-data">{crrNote.createdTime}</span>
           </div>
           <div className="options-icon-container">
-            <IoIosStar />
-            <TbPinned />
-            <RiSave2Fill />
+            <IoIosStar className="notes-icon" />
+            <TbPinned className="notes-icon" />
+            <RiSave2Fill className="notes-icon" />
+            <FaEdit className="notes-icon" />
           </div>
         </div>
       </div>

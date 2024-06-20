@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import NotesContainer from "./components/NotesContainer";
 import AppDataContext from "../src/context/AppDataContext";
 import FormModal from "./components/FormModal";
-import NotesCard from "./components/NotesCard";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         </section>
         <FormModal />
       </AppDataContext>
+      <Toaster position="top-center" />
     </div>
   );
 }
