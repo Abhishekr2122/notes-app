@@ -19,7 +19,18 @@ function App() {
         </section>
         <FormModal />
       </AppDataContext>
-      <Toaster position="top-center" />
+      <Toaster
+        position="top-center"
+        gutter={8}
+        toastOptions={{
+          success: {
+            duration: 2000,
+          },
+          error: {
+            duration: 2000,
+          },
+        }}
+      />
     </div>
   );
 }

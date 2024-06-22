@@ -6,7 +6,8 @@ import { useDataContext } from "../context/AppDataContext";
 import NotesCardContainer from "../components/NotesCardContainer";
 
 export default function Notes() {
-  const { navItems, setSelectedItem, selectedItem } = useDataContext();
+  const { navItems, setSelectedItem, selectedItem, notesArray } =
+    useDataContext();
   const [isBtnClicked, setIsBtnClicked] = useState(false);
   const [crrOptionsArr, setCrrOptionsArr] = useState(function () {
     return navItems.filter(function (citem) {
@@ -43,7 +44,7 @@ export default function Notes() {
       <NotesHeader />
       <div className="num-notes-info">
         <div className="num-notes-count">
-          <p>124 Notes</p>
+          <p>{notesArray?.length} Notes</p>
         </div>
         <div className="notes-icon-container">
           <IoIosArrowDropdown
