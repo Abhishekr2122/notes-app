@@ -131,3 +131,7 @@
 .notes-icon:hover {
   color: blue;
 }
+
+.notes-icon-active {
+  color: blue;
+}

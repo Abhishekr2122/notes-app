@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const DataContext = createContext();
 
 export default function AppDataContext({ children }) {
-  const navItems = ["Notes", "Favourites", "Saved", "Pinned"];
+  const navItems = ["Notes", "Favourite", "Saved", "Pinned"];
   const [notesArray, setNotesArray] = useState([]);
   const [selectedItem, setSelectedItem] = useState("Notes");
   const [isClicked, setIsClicked] = useState(false);

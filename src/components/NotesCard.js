@@ -4,8 +4,10 @@ import { TbPinned } from "react-icons/tb";
 import { RiSave2Fill } from "react-icons/ri";
 import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
+import { useDataContext } from "../context/AppDataContext";
 
 export default function NotesCard({ crrNote }) {
+  const { selectedItem } = useDataContext();
   return (
     <article className="notes-card">
       <div className="image-container">
@@ -37,9 +39,45 @@ export default function NotesCard({ crrNote }) {
             <span className="span-data">{crrNote.createdTime}</span>
           </div>
           <div className="options-icon-container">
-            <IoIosStar className="notes-icon" />
-            <TbPinned className="notes-icon" />
-            <RiSave2Fill className="notes-icon" />
+            <IoIosStar
+              className={`notes-icon ${
+                selectedItem === "Notes"
+                  ? crrNote.favourites
+                    ? "notes-icon-active"
+                    : ""
+                  : selectedItem === "Favourite"
+                  ? crrNote.favourites
+                    ? "notes-icon-active"
+                    : ""
+                  : ""
+              }`}
+            />
+            <TbPinned
+              className={`notes-icon ${
+                selectedItem === "Notes"
+                  ? crrNote.pinned
+                    ? "notes-icon-active"
+                    : ""
+                  : selectedItem === "Pinned"
+                  ? crrNote.pinned
+                    ? "notes-icon-active"
+                    : ""
+                  : ""
+              }`}
+            />
+            <RiSave2Fill
+              className={`notes-icon ${
+                selectedItem === "Notes"
+                  ? crrNote.saved
+                    ? "notes-icon-active"
+                    : ""
+                  : selectedItem === "Saved"
+                  ? crrNote.saved
+                    ? "notes-icon-active"
+                    : ""
+                  : ""
+              }`}
+            />
             <FaEdit className="notes-icon" />
           </div>
         </div>
