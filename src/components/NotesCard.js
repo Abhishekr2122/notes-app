@@ -55,7 +55,7 @@ export default function NotesCard({ crrNote }) {
           <div className="notes-text-container">
             <h2 className="notes-title">{crrNote.title}</h2>
             <MdDelete
-              className="notes-icon"
+              className="delete-icon"
               onClick={function () {
                 handleNoteDelete(crrNote.id);
               }}
@@ -75,55 +75,94 @@ export default function NotesCard({ crrNote }) {
             <span className="span-data">{crrNote.createdTime}</span>
           </div>
           <div className="options-icon-container">
-            <IoIosStar
-              className={`notes-icon ${
-                selectedItem === "Notes"
-                  ? crrNote.favourites
-                    ? "notes-icon-active"
-                    : ""
-                  : selectedItem === "Favourite"
-                  ? crrNote.favourites
-                    ? "notes-icon-active"
-                    : ""
-                  : ""
+            <button
+              className={`button-icon ${
+                selectedItem === "Favourite" || selectedItem === "Notes"
+                  ? ""
+                  : "button-disabled"
               }`}
               onClick={function () {
                 handleCategory("favourites");
               }}
-            />
-            <TbPinned
-              className={`notes-icon ${
-                selectedItem === "Notes"
-                  ? crrNote.pinned
-                    ? "notes-icon-active"
+              disabled={
+                selectedItem === "Favourite" || selectedItem === "Notes"
+                  ? false
+                  : true
+              }
+            >
+              <IoIosStar
+                className={`notes-icon ${
+                  selectedItem === "Notes"
+                    ? crrNote.favourites
+                      ? "notes-icon-active"
+                      : ""
+                    : selectedItem === "Favourite"
+                    ? crrNote.favourites
+                      ? "notes-icon-active"
+                      : ""
                     : ""
-                  : selectedItem === "Pinned"
-                  ? crrNote.pinned
-                    ? "notes-icon-active"
-                    : ""
-                  : ""
+                }`}
+              />
+            </button>
+            <button
+              className={`button-icon ${
+                selectedItem === "Pinned" || selectedItem === "Notes"
+                  ? ""
+                  : "button-disabled"
               }`}
+              disabled={
+                selectedItem === "Pinned" || selectedItem === "Notes"
+                  ? false
+                  : true
+              }
               onClick={function () {
                 handleCategory("pinned");
               }}
-            />
-            <RiSave2Fill
-              className={`notes-icon ${
-                selectedItem === "Notes"
-                  ? crrNote.saved
-                    ? "notes-icon-active"
+            >
+              <TbPinned
+                className={`notes-icon ${
+                  selectedItem === "Notes"
+                    ? crrNote.pinned
+                      ? "notes-icon-active"
+                      : ""
+                    : selectedItem === "Pinned"
+                    ? crrNote.pinned
+                      ? "notes-icon-active"
+                      : ""
                     : ""
-                  : selectedItem === "Saved"
-                  ? crrNote.saved
-                    ? "notes-icon-active"
-                    : ""
-                  : ""
+                }`}
+              />
+            </button>
+            <button
+              className={`button-icon ${
+                selectedItem === "Saved" || selectedItem === "Notes"
+                  ? ""
+                  : "button-disabled"
               }`}
+              disabled={
+                selectedItem === "Saved" || selectedItem === "Notes"
+                  ? false
+                  : true
+              }
               onClick={function () {
                 handleCategory("saved");
               }}
-            />
-            <FaEdit className="notes-icon" />
+            >
+              <RiSave2Fill
+                className={`notes-icon ${
+                  selectedItem === "Notes"
+                    ? crrNote.saved
+                      ? "notes-icon-active"
+                      : ""
+                    : selectedItem === "Saved"
+                    ? crrNote.saved
+                      ? "notes-icon-active"
+                      : ""
+                    : ""
+                }`}
+              />
+            </button>
+            <FaEdit className="edit-icon" />
           </div>
         </div>
       </div>
