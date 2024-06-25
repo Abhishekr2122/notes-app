@@ -26,7 +26,7 @@ export default function Form() {
 
     const finalObj = {
       ...data,
-      favourites: false,
+      favourite: false,
       pinned: false,
       saved: false,
       notes: true,
