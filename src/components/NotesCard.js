@@ -9,7 +9,6 @@ import toast from "react-hot-toast";
 
 export default function NotesCard({ crrNote }) {
   const { selectedItem, notesArray, setNotesArray } = useDataContext();
-  console.log(notesArray);
 
   function handleNoteDelete(selectedId) {
     setNotesArray(function (prevArray) {
@@ -82,7 +81,7 @@ export default function NotesCard({ crrNote }) {
                   : "button-disabled"
               }`}
               onClick={function () {
-                handleCategory("favourites");
+                handleCategory("favourite");
               }}
               disabled={
                 selectedItem === "Favourite" || selectedItem === "Notes"
@@ -93,11 +92,11 @@ export default function NotesCard({ crrNote }) {
               <IoIosStar
                 className={`notes-icon ${
                   selectedItem === "Notes"
-                    ? crrNote.favourites
+                    ? crrNote.favourite
                       ? "notes-icon-active"
                       : ""
                     : selectedItem === "Favourite"
-                    ? crrNote.favourites
+                    ? crrNote.favourite
                       ? "notes-icon-active"
                       : ""
                     : ""

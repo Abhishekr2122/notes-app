@@ -5,7 +5,7 @@ import { v4 as uuid } from "uuid";
 import toast from "react-hot-toast";
 
 export default function Form() {
-  const { setIsClicked, notesArray, setNotesArray } = useDataContext();
+  const { setIsClicked, setNotesArray } = useDataContext();
 
   const { register, handleSubmit, reset } = useForm();
 

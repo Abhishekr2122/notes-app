@@ -9,7 +9,7 @@ export default function NotesCardContainer() {
 
   return (
     <div className="notes-card-container">
-      {finalArray.map(function (citem, i) {
+      {finalArray.map(function (citem) {
         return <NotesCard key={citem.id} crrNote={citem} />;
       })}
     </div>

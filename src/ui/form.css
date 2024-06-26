@@ -115,3 +115,56 @@
   transition-duration: 0.6s;
   color: white;
 }
+
+@media screen and (max-width: 600px) {
+  .form-container {
+    height: 75%;
+    /* background-color: aqua; */
+  }
+
+  .form {
+    height: 100%;
+    width: 90%;
+    gap: 7vw;
+    padding: 2vw;
+  }
+
+  .form-header {
+    /* border: 1px solid blue; */
+    justify-content: space-around;
+    gap: 35vw;
+  }
+
+  .form-header > p {
+    font-size: 6.5vw;
+    /* border: 1px solid red; */
+  }
+
+  .form-close-btn {
+    font-size: 5vw;
+  }
+
+  .input-container {
+    /* border: 1px solid blue; */
+    gap: 4vw;
+  }
+
+  .input-container > label {
+    font-size: 6vw;
+  }
+
+  .input-container > input {
+    font-size: 4vw;
+    padding: 3.5vw;
+  }
+
+  .input-container > textarea {
+    font-size: 4vw;
+  }
+
+  .submit-btn {
+    font-size: 5vw;
+    width: 85%;
+    padding: 3vw;
+  }
+}
