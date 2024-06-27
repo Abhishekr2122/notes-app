@@ -118,17 +118,21 @@
 
 @media screen and (max-width: 600px) {
   .form-container {
-    height: 75%;
-    /* background-color: aqua; */
+    height: 80%;
   }
 
   .form {
     height: 100%;
     width: 90%;
-    gap: 7vw;
+    gap: 5vh;
     padding: 2vw;
+    overflow: scroll;
+    scroll-behavior: smooth;
   }
 
+  .form::-webkit-scrollbar {
+    display: hidden;
+  }
   .form-header {
     /* border: 1px solid blue; */
     justify-content: space-around;
@@ -146,7 +150,7 @@
 
   .input-container {
     /* border: 1px solid blue; */
-    gap: 4vw;
+    gap: 2vh;
   }
 
   .input-container > label {
@@ -165,6 +169,6 @@
   .submit-btn {
     font-size: 5vw;
     width: 85%;
-    padding: 3vw;
+    padding: 2vw;
   }
 }

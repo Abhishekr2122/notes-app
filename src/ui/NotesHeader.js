@@ -7,9 +7,7 @@ export default function NotesHeader() {
   return (
     <div className="notes-header">
       <div className="notes-header-container">
-        <FaRegNoteSticky
-          style={{ height: "4vh", width: "4vw", color: "#8DA6FF" }}
-        />
+        <FaRegNoteSticky className="notes-header-icon" />
         <p className="notes-para">
           {selectedItem === "Notes" ? "All Notes" : `${selectedItem} Notes`}
         </p>

@@ -3,6 +3,7 @@
   width: 35%;
   background-color: white;
   border-radius: 20px;
+  /* border: 1px solid red; */
 }
 
 .num-notes-info {
@@ -102,5 +103,40 @@
 @media screen and (max-width: 600px) {
   .notes {
     width: 100%;
+    border: 1px solid red;
+  }
+
+  .num-notes-count {
+    /* border: 1px solid green; */
+    font-size: 4vw;
+    width: 25%;
+  }
+
+  .options-btn-container {
+    /* border: 1px solid orange; */
+    gap: 2vw;
+  }
+
+  .notes-icon-container {
+    /* border: 1px solid salmon; */
+    justify-content: space-between;
+    width: 75%;
+  }
+
+  .drop-down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5vh;
+    width: 2.5vw;
+
+    /* border: 1px solid blue; */
+    width: 100%;
+  }
+
+  .options-btn {
+    font-size: 4.3vw;
+    padding: 1vw;
+    font-weight: lighter;
   }
 }

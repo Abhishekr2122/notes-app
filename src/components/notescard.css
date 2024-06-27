@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   border-radius: 8px;
+
   /* justify-content: space-around; */
 }
 
@@ -152,6 +153,7 @@
   width: 1.2vw;
   height: 2.3vh;
   color: rgb(91, 143, 240);
+  /* border: 1px solid red; */
 }
 
 .delete-icon:hover {
@@ -167,4 +169,42 @@
 
 .edit-icon:hover {
   color: blue;
+}
+
+@media screen and (max-width: 600px) {
+  .notes-title {
+    /* border: 1px solid red; */
+    font-size: 4.5vw;
+  }
+
+  .notes-sub-title {
+    font-size: 4vw;
+  }
+
+  .delete-icon {
+    height: 3vh;
+    width: 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .notes-paragraph {
+    font-size: 3.5vw;
+    padding: 0.5vw;
+  }
+
+  .span-data {
+    font-size: 2.5vw;
+  }
+
+  .notes-icon {
+    height: 3.5vh;
+    width: 3.5vw;
+  }
+
+  .edit-icon {
+    height: 3.5vh;
+    width: 3.5vw;
+  }
 }
